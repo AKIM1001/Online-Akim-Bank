@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: document-service
+  namespace: onlineakimbank
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: document-service
+  template:
+    metadata:
+      labels:
+        app: document-service
+    spec:
+      initContainers:
+        - name: wait-for-eureka
+          image: curlimages/curl:latest
+          command:
+            - sh
+            - -c
+            - 'until curl -s http://eureka-server:8761/eureka/apps > /dev/null; do echo "Waiting for Eureka Server..."; sleep 5; done'
+      containers:
+        - name: user-service
+          imagePullPolicy: Always
+          image: ghcr.io/akim1001/onlineakimbank/document-service:latest
+          ports:
+            - containerPort: 8089
+          env:
+            - name: SPRING_PROFILES_ACTIVE
+              value: "prod"
+      imagePullSecrets:
+        - name: ghcr-secret
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: document-service
+  namespace: onlineakimbank
+spec:
+  selector:
+    app: document-service
+  ports:
+    - port: 8089
+      targetPort: 8089

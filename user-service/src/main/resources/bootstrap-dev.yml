@@ -1,0 +1,21 @@
+spring:
+  config:
+    import: "vault://secret/dev/user-service"
+
+  cloud:
+    compatibility-verifier:
+      enabled: false
+    vault:
+      uri: http://localhost:8200
+      scheme: http
+      port: 8200
+      host: localhost
+      ssl:
+        enabled: false
+      authentication: TOKEN
+      token: hvstoken123
+
+      kv:
+        enabled: true
+        backend: secret
+        application-name: dev/user-service

@@ -1,0 +1,30 @@
+package com.onlineakimbank.notificationservice.event;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.math.BigDecimal;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class TransactionEvent {
+
+    private String correlationId;
+    private String transactionId;
+
+    private String accountId;
+    private boolean holdFunds;
+    private String metadata;
+
+    private String senderAccountId;
+    private String recipientAccountId;
+
+    private BigDecimal senderBalanceAfter;
+    private BigDecimal recipientBalanceAfter;
+
+    private BigDecimal amount;
+
+    private String currency;
+}

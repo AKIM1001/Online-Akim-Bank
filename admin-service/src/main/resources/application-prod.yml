@@ -1,0 +1,26 @@
+eureka:
+  instance:
+    hostname: {EUREKA_INSTANCE_HOSTNAME}
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: {EUREKA_CLIENT_SERVICE_URL_DEFAULTZONE}
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: {JWT_ISSUER_URI}
+  kafka:
+    bootstrap-servers: {KAFKA_BOOTSTRAP_SERVERS}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+
+keycloak:
+  jwks-certs: {KEYCLOAK_JWKS_CERTS}

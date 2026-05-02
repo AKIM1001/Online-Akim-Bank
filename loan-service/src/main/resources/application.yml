@@ -1,0 +1,22 @@
+server:
+  port: 8086
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+spring:
+  application:
+    name: loan-service
+  threads:
+    virtual:
+      enabled: true
+
+keycloak:
+  use-resource-role-mappings: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus

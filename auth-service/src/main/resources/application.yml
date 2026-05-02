@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
+spring:
+  application:
+    name: auth-service
+  threads:
+    virtual:
+      enabled: true
+  profiles:
+    active: dev
+  kafka:
+    bootstrap-servers: localhost:9092
+
+keycloak:
+  use-resource-role-mappings: true
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
