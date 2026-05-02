@@ -1,6 +1,6 @@
 # Online-Akim-Bank
 
-![Header](https://github.com/AKIM1001/bOnline-Akim-Bank/blob/main/assets/main-image.png)
+![Header](https://github.com/AKIM1001/Online-Akim-Bank/blob/main/assets/main-image.png)
 
 ### Online-Akim-Bank — is a large microservice backend system that handles a significant portion of the banking services offered by modern banks. The application includes functions for payments for various goods and services, transfers between accounts, currency conversion in accordance with the Central Bank of the Russian Federation exchange rate, issuing bank cards to individuals, distributing services to individuals, businesses, and companies, issuing loans, a fully functional admin panel, and much more. The bank's functionality is similar to that of a real bank. It is divided into 12 full-fledged microservices and 10 supporting microservices.
 
