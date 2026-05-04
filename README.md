@@ -216,7 +216,7 @@ Integration: Subscribes to notification-events topic, sends notifications withou
 ![Redis](https://img.shields.io/badge/Redis-%23283336?style=for-the-badge&logo=redis)
 ![Cassandra](https://img.shields.io/badge/Cassandra-%23283336?style=for-the-badge&logo=apachecassandra)
 
-### Full-Stack: Java-21, Spring Boot, Spring Web, Spring Data, Hibernate JPA, Gradle, Lombok, PostgreSQL, Multithread, Redis, Apache Kafka, Zoookeper, Cassandra, Minio, Docker, Kubernetes, Eureka, Prometheus, Grafana, Keycloak, Mapstruct, Vault, Twilio, JavaMailSender.
+### Full-Stack: Java-21, Spring Boot, Spring Web, Spring Data, Hibernate JPA, Gradle, Lombok, PostgreSQL, Multithread, Redis, Apache Kafka, Zookeper, Cassandra, Minio, Docker, Kubernetes, Eureka, Prometheus, Grafana, Keycloak, Mapstruct, Vault, Twilio, JavaMailSender.
 
 
 ## About plans:
